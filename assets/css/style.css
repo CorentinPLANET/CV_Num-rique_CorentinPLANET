@@ -1,40 +1,68 @@
+/* version telephone */
 * {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 3%;
   margin-right: 3%;
 }
+/* Creation d'une barre de nav coller en haut de l'ecran */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   margin-left: 0;
-  background-color: grey;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 6px 6px 6px 6px rgba(0.2, 0, 0, 0.2);
+  max-height: 100px;
   width: 100%;
 }
+/* aligne les elements de la barre de nav en ligne */
 nav ul {
   display: flex;
+  justify-content: center;
 }
+/* enleve le style de liste de la barre de nav */
 nav li {
   list-style: none;
 }
+/* enleve décoration des liens */
 a {
   text-decoration: none;
 }
+/* agence les elements de main en colonne et redescend les 
+premier elements de 27% pour qu'ils ne soient plus en dessous de la nav */
 main {
+  display: flex;
+  flex-direction: column;
   margin-top: 27%;
 }
+/* reduit la taille du titre h2 */
 h2 {
   font-size: 22px;
 }
-h3{
+/* met en majuscule les titre h3 */
+h3 {
   text-transform: uppercase;
 }
-.pres-perso{
-  left:0;
+/* fait un fond d'ecran pour bleu pour la presentation personelle */
+.pres-perso {
   width: 100%;
   background-color: rgb(122, 176, 220);
 }
-.pres-perso li{
+/* reduit l'espace entre les element de la liste centre d'interet */
+.pres-perso li {
+  margin-bottom: -10px;
+}
+/* reduit l'espace entre les element des listes competence et langues */
+.competence li {
+  margin-bottom: -10px;
+}
+/* fait un fond d'ecran jaune pour les projets realises */
+.projet {
+  width: 100%;
+  background-color: rgb(254, 216, 122);
+}
+/* reduit l'espace entre les element de la liste */
+.projet li {
   margin-bottom: -10px;
 }

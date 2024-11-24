@@ -8,13 +8,14 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  margin-left: 0;
   background-color: grey;
   width: 100%;
 }
-ul {
+nav ul {
   display: flex;
 }
-li {
+nav li {
   list-style: none;
 }
 a {
@@ -25,4 +26,15 @@ main {
 }
 h2 {
   font-size: 22px;
+}
+h3{
+  text-transform: uppercase;
+}
+.pres-perso{
+  left:0;
+  width: 100%;
+  background-color: rgb(122, 176, 220);
+}
+.pres-perso li{
+  margin-bottom: -10px;
 }

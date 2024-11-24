@@ -19,7 +19,7 @@ nav {
 /* aligne les elements de la barre de nav en ligne */
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 /* enleve le style de liste de la barre de nav */
 nav li {
@@ -66,3 +66,23 @@ h3 {
 .projet li {
   margin-bottom: -10px;
 }
+@media screen and (min-width: 1024px) {
+  * {
+margin: 0;
+  }
+  body{
+    grid-template-columns:repeat(5,1fr);
+  }
+  nav {
+    position: sticky;
+    padding: 3%;
+    width: 100%;
+  }
+  main {
+    margin-top:5%;
+  }
+  nav ul {
+    justify-content: space-around;
+  }
+}
+

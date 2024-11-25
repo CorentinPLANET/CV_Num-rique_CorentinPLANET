@@ -1,9 +1,12 @@
 /* version telephone */
-* {
+body{
   margin-top: 5%;
   margin-bottom: 5%;
-  margin-left: 3%;
-  margin-right: 3%;
+
+}
+img{
+  height: 100px;
+  width: 100px;
 }
 /* Creation d'une barre de nav coller en haut de l'ecran */
 nav {
@@ -11,7 +14,7 @@ nav {
   top: 0;
   left: 0;
   margin-left: 0;
-  background-color: rgb(243, 243, 243);
+  background-color: #f3f3f3;
   box-shadow: 6px 6px 6px 6px rgba(0.2, 0, 0, 0.2);
   max-height: 100px;
   width: 100%;
@@ -20,10 +23,13 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-around;
+  padding-top: 0;
 }
 /* enleve le style de liste de la barre de nav */
 nav li {
   list-style: none;
+  padding-top: 0;
+  top: 0;
 }
 /* enleve décoration des liens */
 a {
@@ -32,8 +38,8 @@ a {
 /* agence les elements de main en colonne et redescend les 
 premier elements de 27% pour qu'ils ne soient plus en dessous de la nav */
 main {
-  display: flex;
-  flex-direction: column;
+  margin-left: 3%;
+  margin-right: 3%;
   margin-top: 27%;
 }
 /* reduit la taille du titre h2 */
@@ -47,42 +53,81 @@ h3 {
 /* fait un fond d'ecran pour bleu pour la presentation personelle */
 .pres-perso {
   width: 100%;
-  background-color: rgb(122, 176, 220);
+  background-color: #7ab0dc;
 }
-/* reduit l'espace entre les element de la liste centre d'interet */
-.pres-perso li {
-  margin-bottom: -10px;
-}
-/* reduit l'espace entre les element des listes competence et langues */
-.competence li {
-  margin-bottom: -10px;
+h1,h2, section>h3, ul, p {
+  margin-left: 10px;
 }
 /* fait un fond d'ecran jaune pour les projets realises */
 .projet {
   width: 100%;
   background-color: rgb(254, 216, 122);
 }
-/* reduit l'espace entre les element de la liste */
-.projet li {
-  margin-bottom: -10px;
-}
 @media screen and (min-width: 1024px) {
   * {
 margin: 0;
   }
-  body{
-    grid-template-columns:repeat(5,1fr);
-  }
   nav {
-    position: sticky;
-    padding: 3%;
-    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100vw;
   }
   main {
-    margin-top:5%;
+    margin-top:10%;
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows:85px repeat(3,25vh);
   }
   nav ul {
     justify-content: space-around;
+  }
+  main div{
+    display: grid;
+    background-color: #7ab0dc;
+    grid-column: 3/6;
+    grid-row: 1;
+  }
+  h1, h2, section>h3, ul, p, h4{
+    margin-left: 5%;
+  }
+  .pres-perso{
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: white;
+  }
+  .competence{
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 3/5;
+  }
+  .coordonee{
+    display: grid;
+    grid-column: 1/3;
+    grid-row: -1;
+  }
+  .projet{
+    display: grid;
+    grid-column: 3/6;
+    grid-row: 2/6;
+    background-color: #7ab0dc;
+  }
+  .competence li {
+    margin-bottom: 0;
+  }
+  .projet li {
+    margin-bottom: 0;
+  }
+  .pres-perso li {
+    margin-bottom: 0;
+  }
+  .projet h3{
+    display: flex;
+    justify-content: center;
+    background: white;
+
   }
 }
 
